@@ -39,3 +39,28 @@
 <p>2. Once you've ran the settings command, a settings window will open up like below:</p>
 <img src="https://image.prntscr.com/image/N2DlQXRbQfeedU1WlXx3pg.png">
 <p>3. Change the values you want and once you're done, just click "Save & Close" or "Apply" to save your settings.
+
+<h2>Installing Custom Plugins</h2>
+<p>SyncAdmin allows you to create, share and modify plugins for the system itself. This little guide will explain how to install custom plugins for your SyncAdmin setup</p>
+
+<p>1. First, you'll need to create a new <a href="http://wiki.roblox.com/index.php?title=API:Class/ModuleScript">ModuleScript</a> inside the "Plugins" folder inside the SyncAdmin loader.</p>
+
+<p>2. Once you've done that, you'll then need to put the source into the ModuleScript you just created. More information found <a href="https://github.com/DataSynchronized/SyncAdmin/wiki">here</a> regarding the SyncAdmin developer API, etc.</p>
+
+<p>3. Finally, once you've finished putting the source to your custom plugin inside the ModuleScript, make sure the ModuleScript name is the name of the command you'd like to name it. E.g. Name it "Fly" so when you type "!!fly me" it will load the plugin named "Fly"</p>
+
+<blockquote>
+<p><b>Note:</b> Inside the "Plugins" folder, you will see other folders such as fun, administration, etc. These are not important. They're purely there for organisation and you can name them as you like if you want to organise your plugins another way.</p>
+</blockquote>
+
+<h2>Contact the Developers</h2>
+<p>If you're looking to contact us directly to give feedback or perhaps suggest new features, etc. Below are contact details for all the developers involved directly with the SyncAdmin system.</p>
+
+<p><b>VolcanoINC - Server and Client Engineer</b>
+<br>Discord: Dominik [VolcanoINC]#6910</p>
+
+<p><b>DataSynchronized - Website Engineer</b>
+<br>Discord: Kat#3172</p>
+
+<p><b>mathhhew - Client Engineer (User Interface)</b>
+<br>Discord: matthew#2581</p>
