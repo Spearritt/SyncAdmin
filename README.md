@@ -27,7 +27,7 @@
 <p><b>Note:</b> We highly recommend inserting it into <a href="http://wiki.roblox.com/index.phptitle=API:Class/ServerScriptService">ServerScriptService</a> for security</p>
 </blockquote>
 
-<p>3. Finally, let's make sure <a href="http://wiki.roblox.com/index.php?title=API:Class/HttpService">HttpService</a> is enabled by checking the HttpEnabled property.
+<p>3. Finally, let's make sure <a href="http://wiki.roblox.com/index.php?title=API:Class/HttpService">HttpService</a> is enabled by checking if the HttpEnabled property is enabled <b>then move on to the in-game installation instructions.</b></p>
 
 <blockquote>
 <p><b>Note:</b> You do not need to add yourself to the admin list as the game owner is granted level 3 (super administrator) permissions automatically. However, if you need to add developers, etc. to your game, make sure to open the Settings module found inside the SyncAdmin loader and edit the BaseAdmins setting. More information found (here when there's a wiki page for it).</p>
