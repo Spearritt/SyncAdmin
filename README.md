@@ -9,6 +9,6 @@
         <img src="https://img.shields.io/twitter/follow/SyncAdmin.svg?style=social&label=Follow&style=flat-square">
     </a>
     <a href="https://github.com/DataSynchronized/SyncAdmin/issues">
-        <img src="https://img.shields.io/github/issues/badges/shields.svg?style=flat">
+        <img src="img.shields.io/github/issues/datasynchronized/syncadmin.svg?style=flat">
     </a>
 </p>
