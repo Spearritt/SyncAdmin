@@ -56,6 +56,9 @@
 <h2>Got a bug to report?</h2>
 <p>If you've found a bug within the SyncAdmin system, please report it <a href="https://github.com/DataSynchronized/SyncAdmin/issues">here</a>.</p>
 
+<h2>Want to submit your own plugins?</h2>
+<p>If you want to submit your own plugins to be added here, please send us a pull request.</p>
+
 <h2>Contact the Developers</h2>
 <p>If you're looking to contact us directly to give feedback or perhaps suggest new features, etc. Below are contact details for all the developers involved directly with the SyncAdmin system.</p>
 
