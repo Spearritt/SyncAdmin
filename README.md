@@ -11,4 +11,7 @@
     <a href="https://github.com/DataSynchronized/SyncAdmin/issues">
         <img src="https://img.shields.io/github/issues/datasynchronized/syncadmin.svg?style=flat">
     </a>
+    <a href="https://syncadmin.cp">
+        <img src="https://img.shields.io/website-up-down-green-red/https/syncadmin.co.svg?label=SyncAdmin Site?style=flat">
+    </a>
 </p>
