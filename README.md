@@ -66,7 +66,8 @@
 <br>Discord: Dominik [VolcanoINC]#6910</p>
 
 <p><b>DataSynchronized - Website Engineer</b>
-<br>Discord: Kat#3172</p>
+<br>Discord: Kat#3172
+<br>Twitter: @CompressedDuck</p>
 
 <p><b>mathhhew - Client Engineer (User Interface)</b>
 <br>Discord: matthew#2581</p>
