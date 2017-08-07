@@ -122,6 +122,7 @@ command.Run = function(main,user,players,...)
 			error("Invalid amount of arguments.");
 		end
 
+		local plrnames = {};
 		for _,player in pairs (players) do
 			if not (SyncAPI.GetPermissionLevel(user) > SyncAPI.GetPermissionLevel(player)) then
 				return false, "You cannot run this command on someone with a higher permission level than you.";
@@ -134,9 +135,10 @@ command.Run = function(main,user,players,...)
 				Storage:SetAsync("TimeLeft", Time + tick());
 				Storage:SetAsync("Reason", Reason);
 				player:Kick("You have been kicked from the server.\nReason: "..Reason..".\n Time left until ban is lifted: "..TimeLength..".");
+				table.insert(plrnames, player.Name);
 			end
 		end
-		return true,"Temporary banned "..table.concat(players, ", ").." for: "..TimeLength..", Reason: "..Reason..".";
+		return true,"Temporary banned "..table.concat(plrnames, ", ").." for: "..TimeLength..", Reason: "..Reason..".";
 	end
 end
 
