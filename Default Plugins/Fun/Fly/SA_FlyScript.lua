@@ -1,9 +1,14 @@
 -- THIS IS A LOCALSCRIPT
 
+if not script:WaitForChild('UnFly', 1) then
+	Instance.new("RemoteFunction", script).Name = "UnFly";
+end
+
 local char = script.Parent
 local plr = game:GetService("Players").LocalPlayer
 local rstep = game:GetService("RunService").RenderStepped
 local flyEnabled = true
+local disabled = false;
 local camera = workspace.CurrentCamera
 local mouse = plr:GetMouse()
 
@@ -44,8 +49,7 @@ bgyro.Parent = part
 
 mass = getRecursiveMass(part)
 
-
-mouse.KeyDown:connect(function(key)
+local ev_kD = mouse.KeyDown:connect(function(key)
 	key = key:upper()
 	
 	if (key == "W") then key_w = 1 end
@@ -70,7 +74,7 @@ mouse.KeyDown:connect(function(key)
 	end
 end)
 
-mouse.KeyUp:connect(function(key)
+local ev_kU = mouse.KeyUp:connect(function(key)
 	key = key:upper()
 	
 	if (key == "W") then key_w = 0 end
@@ -81,7 +85,16 @@ mouse.KeyUp:connect(function(key)
 	if (key == "Q") then key_q = 0 end
 end)
 
-while true do
+script:WaitForChild('UnFly').OnClientInvoke = function()
+	disabled = true;
+	rstep:wait();
+	humanoid.PlatformStand = false;
+	bforce.Parent = nil;
+	bgyro.Parent = nil;
+	return true;
+end
+
+while not disabled do
 	rstep:wait()
 	if (flyEnabled) then
 		humanoid.PlatformStand = true
@@ -104,3 +117,4 @@ while true do
 		bforce.Force = Vector3.new(0,workspace.Gravity * mass,0) + force
 	end
 end
+
