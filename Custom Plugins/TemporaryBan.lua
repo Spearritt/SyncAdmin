@@ -8,22 +8,7 @@
 	@Description: SyncAdmin plugin to ban users from your game
 	@Author: Dominik [VolcanoINC], Hannah Jane [DataSynchronized]
 
-	Temporary Ban [Remade]
-
-	This should be a better version for the temporary ban.
-
-	Notes;
-	Banning without a reason will only display the time left for a person to be unbanned
-
-	This uses tick() yes.
-	All the bans are stored on the game's datastore.
-
 	Credits go to lukezammit and AmbientOcclusion.
-
-	Note from luke,
-	I've added some webhook support for those who need it.
-
-	Max time is years.
 ]]--
 
 local Players = game:GetService("Players");

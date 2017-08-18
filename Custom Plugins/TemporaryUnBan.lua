@@ -4,10 +4,9 @@
 	  ___) | |_| | | | | (__ / ___ \ (_| | | | | | | | | | |
 	 |____/ \__, |_| |_|\___/_/   \_\__,_|_| |_| |_|_|_| |_|
 	        |___/
-
-	@Description: SyncAdmin plugin to ban users from your game
+	@Description: SyncAdmin plugin to unban a user from your game
 	@Author: Dominik [VolcanoINC], Hannah Jane [DataSynchronized]
-
+	
 	Credits go to lukezammit.
 ]]--
 
@@ -28,12 +27,12 @@ command.Run = function(main,user,...)
 	local UserId = {...};
 	local succ, err = pcall(function() local player = Players:GetNameFromUserIdAsync(tonumber(UserId[1])) end);
 	if (succ) then
-		local Storage = DataStore:GetDataStore(UserId.."_SyncAdminTempBan")	;
+		local Storage = DataStore:GetDataStore(UserId[1].."_SyncAdminTempBan")	;
 		local TimeStorage = Storage:GetAsync("TimeLeft");
 		local ReasonStorage = Storage:GetAsync("Reason");
 		Storage:SetAsync("TimeLeft", 0);
 		Storage:SetAsync("Reason", "")	;
-		return true,"Unbanned "..Players:GetNameFromUserIdAsync(tonumber(UserId)).." from the temporary ban.";
+		return true,"Unbanned "..Players:GetNameFromUserIdAsync(tonumber(UserId[1])).." from the temporary ban.";
 	else
 		return false,"This user does not exist.";
 	end
