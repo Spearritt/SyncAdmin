@@ -17,12 +17,12 @@ local DataStore = game:GetService("DataStoreService");
 local function TimeFormat(TimeInSeconds)
 	local Rounded = math.ceil(TimeInSeconds);
 	local Calculated do
-		if Rounded >= 3.154e+7 then -- Time in seconds of a year
-			Calculated = {math.ceil(Rounded/3.154e+7), "year(s)"};
-		elseif Rounded >= 2.628e+6 then -- Time in seconds of a month
-			Calculated = {math.ceil(Rounded/2.628e+6), "month(s)"};
+		if Rounded >= 31104000 then -- Time in seconds of a year
+			Calculated = {math.ceil(Rounded/31104000), "year(s)"};
+		elseif Rounded >= 604800 then -- Time in seconds of a month
+			Calculated = {math.ceil(Rounded/2592000), "month(s)"};
 		elseif Rounded >=604800 then -- Time in seconds of a week
-			Calculated = {math.ceil(Rounded/1.65344e-6), "week(s)"};
+			Calculated = {math.ceil(Rounded/604800), "week(s)"};
 		elseif Rounded >= 86400 then -- Time in seconds of a day
 			Calculated = {math.ceil(Rounded/86400), "day(s)"};
 		elseif Rounded >= 3600 then -- Time in seconds of an hour
@@ -50,16 +50,11 @@ command.Init = function(main)
 		if TimeInSeconds == nil then
 			Data:SetAsync("TimeLeft", 0)
 		else
-			if ( TimeInSeconds > 0 and TimeInSeconds - tick() <= 0 ) then
-				--If you have a webhook you could use the format below to be sent to your webhook
-				local format = 	TimeFormat(TimeInSeconds - tick());-->This will return a table, format[1] --> Time left, format[2] --> The time format
+			TimeInSeconds = tonumber(TimeInSeconds)
+			if ( TimeInSeconds > 0 and TimeInSeconds - os.time() > 0 ) then
+				local format = 	TimeFormat(TimeInSeconds - os.time());-->This will return a table, format[1] --> Time left, format[2] --> The time format
 				local display = format[1]..format[2];
-				local reason;
-				if ( ReasonForTBan == nil or ReasonForTBan == "" ) then
-					reason = "Unspecified";
-				else
-					reason = ReasonForTBan;
-				end
+				local reason = ReasonForTBan
 				player:Kick("You have been kicked from the server.\nReason: "..reason..".\n Time left until ban is lifted: "..display..".");
 			end
 		end
@@ -72,9 +67,8 @@ command.Run = function(main,user,players,...)
 		local TimeLength;
 		local Time;
 		local Reason;
-
 		if Suffix[1] ~= nil and Suffix[2] ~= nil then
-			if (Suffix[1]:match("%d+")~=nil) then
+			if (Suffix[1]:match("%d+")) then
 				Time = tonumber(Suffix[1]:match("%d+"))
 				local Argument = Suffix[2]:lower()
 				if (Argument == "s" or Argument == "sec" or Argument == "second" or Argument == "seconds") then
@@ -88,18 +82,15 @@ command.Run = function(main,user,players,...)
 		        elseif (Argument == "w" or Argument == "week" or Argument == "weeks") then
 		            Time = Time * 604800;
 		        elseif (Argument == "mt" or Argument == "month" or Argument == "months") then
-		            Time = Time * 2.628e+6;
+		            Time = Time * 2592000;
 		        elseif (Argument == "y" or Argument == "year" or Argument == "years") then
-		            Time = Time * 3.154e+7;
+		            Time = Time * 31104000;
 				else
 					error("Invalid second argument.");
 				end
-
-				TimeLength = TimeFormat(Suffix[1])[1].." "..TimeFormat(Suffix[1])[2];
-
-				if Suffix[3]~=nil then
-					Reason = Suffix[3] else Reason = "Unspecified";
-				end
+				print(Time)
+				TimeLength = TimeFormat(Time)[1].." "..TimeFormat(Time)[2];--Time instead of Suffix[1] Weird.
+				Reason = table.concat(Suffix, " ", 3) or "Unspecified";
 			else
 				error("Invalid first argument.");
 			end
@@ -116,8 +107,9 @@ command.Run = function(main,user,players,...)
 				local TimeStorage = Storage:GetAsync("TimeLeft");
 				local ReasonStorage = Storage:GetAsync("Reason");
 				local Reason = game:GetService("Chat"):FilterStringForBroadcast(Reason, user);
+				local TimeLeftUntilLift = Time + os.time()
 
-				Storage:SetAsync("TimeLeft", Time + tick());
+				Storage:SetAsync("TimeLeft", TimeLeftUntilLift);
 				Storage:SetAsync("Reason", Reason);
 				player:Kick("You have been kicked from the server.\nReason: "..Reason..".\n Time left until ban is lifted: "..TimeLength..".");
 				table.insert(plrnames, player.Name);
