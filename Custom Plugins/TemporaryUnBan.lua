@@ -32,7 +32,7 @@ command.Run = function(main,user,...)
 		local ReasonStorage = Storage:GetAsync("Reason");
 		Storage:SetAsync("TimeLeft", 0);
 		Storage:SetAsync("Reason", "")	;
-		return true,"Unbanned "..Players:GetNameFromUserIdAsync(tonumber(UserId)).." from the temporary ban.";
+		return true,"Unbanned "..Players:GetNameFromUserIdAsync(tonumber(UserId[1])).." from the temporary ban.";
 	else
 		return false,"This user does not exist.";
 	end
