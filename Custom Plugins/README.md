@@ -20,7 +20,7 @@
 <hr>
 
 <h2>Custom Plugins</h2>
-<p>This area contains plugins which have been reviewed and verified by the SyncAdmin Content Team which you can use in the <a href="http://www.roblox.com/library/549677290/SyncAdmin">SyncAdmin Loader</a>.</p>
+<p>This area contains plugins which were created by the SyncAdmin developer community and have been reviewed and verified by the SyncAdmin Content Team which you can use in the <a href="http://www.roblox.com/library/549677290/SyncAdmin">SyncAdmin Loader</a>.</p>
 
 <h2>Installing Plugins</h2>
 <p>1. First, you'll need to open up the "Plugins" diretory found inside the loader.</p>
