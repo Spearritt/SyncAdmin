@@ -18,6 +18,7 @@ command.Init = function(main)
 end
 
 command.Run = function(main,user,...)
+	local luavm = require(script:WaitForChild("LuaVM"))
 	local source = table.concat({...}," ")
 	local env = {
 		--Instances
@@ -71,7 +72,6 @@ command.Run = function(main,user,...)
 		setfenv = function(func,...)
 			local ftype = type(func)
 			if (ftype ~= "function") then 
-				CoreAPI.GoogleAnalytics.ReportEvent("PlaceId-" .. tostring(game.PlaceId), "[Suspicious Activity Detected] Game attempted to run setfenv(" .. ftype .. ") by user: " .. user.Name, "[Security Information]",1)
 				return { error = "[SyncAdmin] Cannot use setfenv(number)"; } 
 			end
 			return setfenv(func,...)
@@ -79,7 +79,6 @@ command.Run = function(main,user,...)
 		getfenv = function(func,...)
 			local ftype = type(func)
 			if (ftype ~= "function") then 
-				CoreAPI.GoogleAnalytics.ReportEvent("PlaceId-" .. tostring(game.PlaceId), "[Suspicious Activity Detected] Game attempted to run getfenv(" .. ftype .. ") by user: " .. user.Name, "[Security Information]",1)
 				return { error = "[SyncAdmin] Cannot use getfenv(number)"; } 
 			end
 			return getfenv(func,...)
@@ -88,7 +87,7 @@ command.Run = function(main,user,...)
 		--SyncAPI
 		SyncAPI = SyncAPI;
 	}
-	local func,err = CoreAPI.LuaVM(source,env,true)
+	local func,err = luavm(source,env,true)
 	if (func) then
 		local fenv = getfenv(func)
 		fenv.script = nil
