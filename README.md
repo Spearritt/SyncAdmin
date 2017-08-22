@@ -71,3 +71,6 @@
 
 <p><b>mathhhew - Client Engineer (User Interface)</b>
 <br>Discord: matthew#2581</p>
+
+<p><b>Spearritt - Client Engineer (User Interface)</b>
+<br>Discord: Sam [Spearritt]#1404</p>
