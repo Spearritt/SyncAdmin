@@ -3,7 +3,7 @@
 									Verified SyncAdmin Command
 	======================================================================================
 	Authors 				Hannah Jane [DataSynchronized], Dominik [VolcanoINC]
-	Description				Run in-game scripts.
+	Description				Run in-game scripts. 
 	--------------------------------------------------------------------------------------
 --]]
 
