@@ -28,7 +28,7 @@ command.Run = function(main,user,id)
 		return false,"ID could not be loaded"
 	end
 	hat = hat[1]
-	if not hat:IsA("Hat") and not hat:IsA("Accoutrement") then
+	if not hat:IsA("Hat") and not hat:IsA("Accoutrement") and not hat:IsA("Accessory") then
 		return false, "ID is not a hat"
 	end
 	hat:Clone().Parent = user.Character
