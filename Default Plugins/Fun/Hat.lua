@@ -33,7 +33,11 @@ command.Run = function(main,user,users,id)
 	local list = {}
 	for _,player in pairs(users) do
 		table.insert(list,player.Name)
-		hat:Clone().Parent = player.Character
+		if hat:IsA("Accessory") then
+			player.Character.Humanoid:AddAccessory(hat:Clone());
+		else
+			hat:Clone().Parent = player.Character
+		end
 	end
 	return true,"Given hat to " .. table.concat(list,", "),list,user.Name .. " has given you a hat."
 end
