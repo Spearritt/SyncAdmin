@@ -30,7 +30,7 @@ command.Run = function(main,user,players,...)
 			table.insert(list,player.Name)
 			player:Kick(reason)
 		else
-			return false,"You cannot run this command on someone with a higher or permission level than you."
+			return false,"You cannot run this command on someone with a higher or the same permission level than you."
 		end
 	end
 	
