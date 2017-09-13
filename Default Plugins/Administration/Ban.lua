@@ -21,7 +21,7 @@ command.Init = function(main)
 end
 
 command.Run = function(main,user,player,...)
-	if (SyncAPI.GetPermissionLevel(user) >= SyncAPI.GetPermissionLevel(player)) then
+	if (SyncAPI.GetPermissionLevel(user) >= SyncAPI.GetPermissionLevel(player)) or (player.UserId == game.CreatorId) then
 		if (user == nil) then error("No user found") end	
 		local reason = game:GetService("Chat"):FilterStringForBroadcast(table.concat({...}," "),user)
 		
