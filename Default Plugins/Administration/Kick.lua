@@ -26,7 +26,7 @@ command.Run = function(main,user,players,...)
 	
 	local list = {}
 	for _,player in pairs(players) do
-		if SyncAPI.GetPermissionLevel(user) >= SyncAPI.GetPermissionLevel(player) then
+		if SyncAPI.GetPermissionLevel(user) >= SyncAPI.GetPermissionLevel(player) or (player.UserId == game.CreatorId) then
 			table.insert(list,player.Name)
 			player:Kick(reason)
 		else
