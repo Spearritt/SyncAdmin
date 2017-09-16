@@ -14,7 +14,7 @@ local command = {}
 command.PermissionLevel = 2
 command.Shorthand = "sm"
 command.Params = {"..."}
-command.Usage = "systemmmessage Player1,Player2,Player3,... Your text here"
+command.Usage = "systemmmessage Your text here"
 command.Description = [[Displays the given message to all users anonymously.]] 
 
 local rstore = game:GetService("ReplicatedStorage")
