@@ -8,8 +8,8 @@
     <a href="https://twitter.com/SyncAdmin">
         <img src="https://img.shields.io/twitter/follow/SyncAdmin.svg?style=social&label=Follow&style=flat-square">
     </a>
-    <a href="https://github.com/DataSynchronized/SyncAdmin/issues">
-        <img src="https://img.shields.io/github/issues/datasynchronized/syncadmin.svg?style=flat">
+    <a href="https://github.com/ForPizzaSake/SyncAdmin/issues">
+        <img src="https://img.shields.io/github/issues/forpizzasake/syncadmin.svg?style=flat">
     </a>
     <a href="https://syncadmin.co">
         <img src="https://img.shields.io/website-up-down-green-red/https/syncadmin.co.svg?label=SyncAdmin%20Site">
