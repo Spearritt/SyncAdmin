@@ -18,7 +18,7 @@ command.Run = function(main,user,users)
 	local ts = game:GetService("TeleportService");
 	local s = ts:ReserveServer(game.PlaceId);
 	ts:TeleportToPrivateServer(game.PlaceId,s,users,nil,{["syncadmin-reservedserver"]=true,["serverid"]=s});
-	return true,"Server reserverd, teleporting.."
+	return true,"Server reserved, teleporting.."
 end
 
 return command;
