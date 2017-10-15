@@ -62,17 +62,13 @@
 <h2>Contact the Developers</h2>
 <p>If you're looking to contact us directly to give feedback or perhaps suggest new features, etc. Below are contact details for all the developers involved directly with the SyncAdmin system.</p>
 
+<h3> Web and Server Team </h3>
+
 <p><b>VolcanoINC - Server and Client Engineer</b>
 <br>Discord: Dominik [VolcanoINC]#6910</p>
 
 <p><b>DataSynchronized - Website Engineer</b>
 <br>Discord: Kat#3172
-
-<p><b>mathhhew - Client Engineer (User Interface)</b>
-<br>Discord: matthew#2581</p>
-
-<p><b>Spearritt - Client Engineer (User Interface)</b>
-<br>Discord: Sam [Spearritt]#1404</p>
 
 <h3> ROBLOX Codebase Team </h3>
 
