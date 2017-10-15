@@ -64,10 +64,10 @@
 
 <h3> Web and Server Team </h3>
 
-<p><b>VolcanoINC - Server and Client Engineer</b>
+<p><b>VolcanoINC</b>
 <br>Discord: Dominik [VolcanoINC]#6910</p>
 
-<p><b>DataSynchronized - Website Engineer</b>
+<p><b>DataSynchronized</b>
 <br>Discord: Kat#3172
 
 <h3> ROBLOX Codebase Team </h3>
