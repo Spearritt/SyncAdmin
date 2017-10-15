@@ -74,7 +74,7 @@
 <p><b>Spearritt - Client Engineer (User Interface)</b>
 <br>Discord: Sam [Spearritt]#1404</p>
 
-<h3> ROBLOX Codebase Team </h3>
+<h4> ROBLOX Codebase Team </h4>
 
 <p><b>Spearritt</b>
 <br>Discord: Sam [Spearritt]#1404</p>
