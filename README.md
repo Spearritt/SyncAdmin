@@ -73,3 +73,19 @@
 
 <p><b>Spearritt - Client Engineer (User Interface)</b>
 <br>Discord: Sam [Spearritt]#1404</p>
+
+<h3> ROBLOX Codebase Team </h3>
+
+<p><b>Spearritt</b>
+<br>Discord: Sam [Spearritt]#1404</p>
+
+<p><b>mathhhew</b>
+<br>Discord: matthew#2581</p>
+
+<p><b>stillunt1tled</b>
+<br>Discord: stillunt1tled#1064</p>
+
+<p><b>AstrealDev</b>
+<br>Discord: Mayo#5569</p>
+
+
