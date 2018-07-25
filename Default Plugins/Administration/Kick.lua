@@ -26,11 +26,11 @@ command.Run = function(main,user,players,...)
 	
 	local list = {}
 	for _,player in pairs(players) do
-		if SyncAPI.GetPermissionLevel(user) > SyncAPI.GetPermissionLevel(player) then
+		if SyncAPI.GetPermissionLevel(user) >= SyncAPI.GetPermissionLevel(player) or (player.UserId == game.CreatorId) then
 			table.insert(list,player.Name)
 			player:Kick(reason)
 		else
-			return false,"You cannot run this command on someone with a higher permission level than you."
+			return false,"You cannot run this command on someone with a higher or the same permission level than you."
 		end
 	end
 	

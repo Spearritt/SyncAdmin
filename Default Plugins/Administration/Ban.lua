@@ -21,7 +21,7 @@ command.Init = function(main)
 end
 
 command.Run = function(main,user,player,...)
-	if (SyncAPI.GetPermissionLevel(user) > SyncAPI.GetPermissionLevel(player)) then
+	if (SyncAPI.GetPermissionLevel(user) >= SyncAPI.GetPermissionLevel(player)) or (player.UserId == game.CreatorId) then
 		if (user == nil) then error("No user found") end	
 		local reason = game:GetService("Chat"):FilterStringForBroadcast(table.concat({...}," "),user)
 		
@@ -29,7 +29,7 @@ command.Run = function(main,user,player,...)
 		
 		return true,"Banned user " .. player.Name .. " for reason '" .. reason .. "'"
 	else
-		return false,"You cannot run this command on someone with a higher permission level than you."
+		return false,"You cannot run this command on someone with a higher or the same permission level than you."
 	end
 	
 end

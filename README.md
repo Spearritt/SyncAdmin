@@ -8,10 +8,10 @@
     <a href="https://twitter.com/SyncAdmin">
         <img src="https://img.shields.io/twitter/follow/SyncAdmin.svg?style=social&label=Follow&style=flat-square">
     </a>
-    <a href="https://github.com/DataSynchronized/SyncAdmin/issues">
-        <img src="https://img.shields.io/github/issues/datasynchronized/syncadmin.svg?style=flat">
+    <a href="https://github.com/ForPizzaSake/SyncAdmin/issues">
+        <img src="https://img.shields.io/github/issues/forpizzasake/syncadmin.svg?style=flat">
     </a>
-    <a href="https://syncadmin.cp">
+    <a href="https://syncadmin.co">
         <img src="https://img.shields.io/website-up-down-green-red/https/syncadmin.co.svg?label=SyncAdmin%20Site">
     </a>
 </p>
@@ -62,12 +62,29 @@
 <h2>Contact the Developers</h2>
 <p>If you're looking to contact us directly to give feedback or perhaps suggest new features, etc. Below are contact details for all the developers involved directly with the SyncAdmin system.</p>
 
-<p><b>VolcanoINC - Server and Client Engineer</b>
+<h3> Web and Server Team </h3>
+
+<p><b>VolcanoINC</b>
 <br>Discord: Dominik [VolcanoINC]#6910</p>
 
-<p><b>DataSynchronized - Website Engineer</b>
+<p><b>DataSynchronized</b>
 <br>Discord: Kat#3172
-<br>Twitter: @CompressedDuck</p>
 
-<p><b>mathhhew - Client Engineer (User Interface)</b>
+<h3> ROBLOX Codebase Team </h3>
+
+<p><b>Spearritt</b>
+<br>Discord: Sam [Spearritt]#1404</p>
+
+<p><b>Railworks2</b>
+<br>Website: http://railworks2.co.uk/</p>
+
+<p><b>mathhhew</b>
 <br>Discord: matthew#2581</p>
+
+<p><b>stillunt1tled</b>
+<br>Discord: stillunt1tled#1064</p>
+
+<p><b>AstrealDev</b>
+<br>Discord: Mayo#5569</p>
+
+
